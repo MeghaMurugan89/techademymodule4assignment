@@ -50,8 +50,10 @@ public class TodoListApp {
 		String description = scanner.nextLine();
 		System.out.print("Enter the due date (YYYY-MM-DD): ");
 		String dueDate = scanner.nextLine();
+		System.out.print("Enter task priority (1-5): ");
+		int priority = Integer.parseInt(scanner.nextLine());
 
-		tasks[taskCount] = new Task(description, dueDate);
+		tasks[taskCount] = new Task(description, dueDate, priority);
 		taskCount++;
 		System.out.println("Task added successfully.");
 	}
